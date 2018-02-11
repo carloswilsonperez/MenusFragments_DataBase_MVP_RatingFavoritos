@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tam_titulo">25sp</dimen>
+    <dimen name="tam_15">15sp</dimen>
+    <dimen name="tam_20">20sp</dimen>
+    <dimen name="tam_25">25sp</dimen>
+    <dimen name="espacio_10">10sp</dimen>
+    <dimen name="cv_ancho">70sp</dimen>
+    <dimen name="cv_alto">80sp</dimen>
+</resources>
