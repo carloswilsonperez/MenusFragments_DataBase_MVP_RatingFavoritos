@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="120sp"
             android:layout_gravity="center"
-            android:src="@drawable/pet_1" />
+            android:src="@drawable/pet_1"
+            android:paddingTop="@dimen/espacio_10"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
