@@ -20,6 +20,13 @@ public class Mascota {
         this.likes  = 0;
     }
 
+    public Mascota(int id, String nombre, int foto, int likes) {
+        this.id = id;
+        this.nombre = nombre;
+        this.foto = foto;
+        this.likes = likes;
+    }
+
     public Mascota() {
 
     }

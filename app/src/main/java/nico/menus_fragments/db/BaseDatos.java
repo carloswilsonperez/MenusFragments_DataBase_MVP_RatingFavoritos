@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.security.PublicKey;
@@ -81,12 +82,8 @@ public class BaseDatos extends SQLiteOpenHelper {
     public ArrayList<Mascota> obtenerMascotasFavoritas() {
         ArrayList<Mascota> mascotas_f = new ArrayList<Mascota>();
 
-
-
-//        String querty = "SELECT * FROM " + ConstantesBaseDatos.TABLE_MASCOTAS
-//                + " ORDER BY " + ConstantesBaseDatos.TABLE_MASCOTAS_LIKES + " DESC LIMIT 5";
-
-        String querty = "SELECT * FROM " + ConstantesBaseDatos.TABLE_MASCOTAS;
+        String querty = "SELECT * FROM " + ConstantesBaseDatos.TABLE_MASCOTAS
+                + " ORDER BY " + ConstantesBaseDatos.TABLE_MASCOTAS_LIKES + " DESC LIMIT 5";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor =  db.rawQuery(querty, null);
