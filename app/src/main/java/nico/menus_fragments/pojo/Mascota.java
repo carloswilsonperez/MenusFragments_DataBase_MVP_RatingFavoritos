@@ -8,14 +8,20 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Mascota {
 
-    String nombre;
-    int foto;
-    int likes;
+    private int id;
+    private String nombre;
+    private int foto;
+    private int likes;
 
-    public Mascota (String nombre, int foto){
+    public Mascota(String nombre, int foto){
         this.nombre =nombre;
         this.foto   =foto;
-        this.likes  = ThreadLocalRandom.current().nextInt(1, 10);
+//        this.likes  = ThreadLocalRandom.current().nextInt(1, 10);
+        this.likes  = 0;
+    }
+
+    public Mascota() {
+
     }
 
     public String getNombre() {
@@ -42,6 +48,13 @@ public class Mascota {
         this.likes = likes;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
 
 

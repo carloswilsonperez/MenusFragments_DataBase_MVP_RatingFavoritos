@@ -6,10 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,8 +16,8 @@ import nico.menus_fragments.ContactoActivity;
 import nico.menus_fragments.MascotasFavoritasActivity;
 import nico.menus_fragments.R;
 import nico.menus_fragments.adapters.PageAdapter;
-import nico.menus_fragments.fragments.MascotaFragment;
-import nico.menus_fragments.fragments.RecyclerViewFragment;
+import nico.menus_fragments.view_fragments.MascotaFragment;
+import nico.menus_fragments.view_fragments.RecyclerViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -12,6 +12,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import nico.menus_fragments.R;
+import nico.menus_fragments.db.ConstructorMascotas;
 import nico.menus_fragments.pojo.Mascota;
 
 /**
@@ -36,7 +37,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MiMa
     }
 
     @Override
-    public void onBindViewHolder(MiMascotaViewHolder holder, int position) {
+    public void onBindViewHolder(final MiMascotaViewHolder holder, int position) {
         final Mascota mascota = mascotas.get(position);
         holder.image_view_mascota.setImageResource(mascota.getFoto());
         holder.text_view_nombre_mascota.setText(mascota.getNombre());
@@ -45,9 +46,14 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MiMa
         holder.image_view_dog_like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mascota.setLikes(mascota.getLikes()+1);
+                ConstructorMascotas cm = new ConstructorMascotas(activity);
+                cm.darLikeMascota(mascota);
+
                 Toast.makeText(activity, mascota.getLikes() + " Likes a " + mascota.getNombre(),
                         Toast.LENGTH_SHORT).show();
+                holder.text_view_like_counter.setText(String.valueOf(mascota.getLikes()));
             }
         });
     }

@@ -1,4 +1,4 @@
-package nico.menus_fragments.fragments;
+package nico.menus_fragments.view_fragments;
 
 
 import android.content.res.Resources;
@@ -12,7 +12,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +22,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import nico.menus_fragments.R;
-import nico.menus_fragments.adapters.MascotaAdaptador;
 import nico.menus_fragments.adapters.MascotaPrincipalAdaptador;
 import nico.menus_fragments.pojo.Mascota;
 

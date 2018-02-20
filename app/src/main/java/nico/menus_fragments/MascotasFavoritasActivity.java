@@ -1,25 +1,24 @@
 package nico.menus_fragments;
 
-import android.app.ActionBar;
-import android.support.annotation.Nullable;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
 import nico.menus_fragments.adapters.MascotaAdaptador;
+import nico.menus_fragments.db.BaseDatos;
+import nico.menus_fragments.db.ConstantesBaseDatos;
 import nico.menus_fragments.pojo.Mascota;
 
 public class MascotasFavoritasActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<Mascota> mascotas = new ArrayList<>();
+    ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
     MascotaAdaptador mascotaAdaptador;
 
     @Override
@@ -38,7 +37,10 @@ public class MascotasFavoritasActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(llm);
 
         recyclerView.setAdapter(mascotaAdaptador);
-        prepararInfo();
+        BaseDatos bd = new BaseDatos(this);
+        mascotas = bd.obtenerMascotasFavoritas();
+        //prepararInfo();
+
     }
 
     private void prepararInfo() {
@@ -48,6 +50,24 @@ public class MascotasFavoritasActivity extends AppCompatActivity {
         mascotas.add(new Mascota("Mascota_2", R.drawable.pet_2));
         mascotas.add(new Mascota("Mascota_1", R.drawable.pet_1));
         mascotas.add(new Mascota("Mascota_6", R.drawable.pet_6));
+
     }
 
+//    @Override
+//    public void generarLinearLayoutVertical() {
+//        LinearLayoutManager llm = new LinearLayoutManager(this);
+//        llm.setOrientation(LinearLayoutManager.VERTICAL);
+//        recyclerView.setLayoutManager(llm);
+//    }
+//
+//    @Override
+//    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas) {
+//        mascotaAdaptador    = new MascotaAdaptador(mascotas, this);
+//        return mascotaAdaptador;
+//    }
+//
+//    @Override
+//    public void inicializarAdaptadorRV(MascotaAdaptador mascotaAdaptador) {
+//        recyclerView.setAdapter(mascotaAdaptador);
+//    }
 }

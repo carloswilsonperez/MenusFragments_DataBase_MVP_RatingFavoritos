@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MenusFragments.iml" filepath="$PROJECT_DIR$/MenusFragments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MenusFragments - DataBase - MVP - RatingFavoritos.iml" filepath="$PROJECT_DIR$/MenusFragments - DataBase - MVP - RatingFavoritos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
